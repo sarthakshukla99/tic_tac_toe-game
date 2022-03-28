@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+nav {
+  background-color: black;
+  color: white;
+  height: 50px;
+  font-size: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.gameContainer {
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+  /* border: 2px solid black; */
+  border: thick double #1182af;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box:hover {
+  background-color: hsl(272, 35%, 92%);
+}
+
+.info {
+  font-size: 27px;
+}
+
+.gameInfo {
+  padding: 0 34px;
+}
+
+.infobtn{
+    margin-top: 1.6vh;
+}
+
+.gameInfo h1 {
+    font-size: 2.6rem;
+  }
+
+.imgbox img {
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+.bl-0 {
+  border-left: 0;
+}
+.bt-0 {
+  border-top: 0;
+}
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  margin: 0 23px;
+  padding: 6px 14px;
+  background: #e5c7e5;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 20vw;
+    position: absolute;
+}
+
+@media screen and (max-width: 930px) {
+  .gameContainer {
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+
+  .gameInfo {
+    margin-top: 40px;
+  }
+
+  .gameInfo h1 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 23vw);
+    grid-template-columns: repeat(3, 23vw);
+  }
+}
